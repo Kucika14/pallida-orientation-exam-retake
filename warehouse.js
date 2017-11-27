@@ -11,14 +11,24 @@ function ajax(method, url, callback) {
 
 let displayClothes = (items) => {
     console.log(items)
-    let table = document.querySelector('.rows')
+    let table = document.querySelector('table')
+    table.innerHTML = `<thead>
+                        <th>ITEM NAME</th>
+                        <th>manufacturer</th> 
+                        <th>category</th>
+                        <th>size</th>
+                        <th>unit price</th>
+                        <th>in store</th>
+                       </thead>`
     items.data.forEach(function(e){
-        let elements = `<td>${e.item_name}</td>
-                        <td>${e.manufacturer}</td>
-                        <td>${e.category}</td>
-                        <td>${e.size}</td>
-                        <td>${e.unit_price}</td>
-                        <td>${e.in_store}</td>`
+        let elements = `<tr>
+                         <td>${e.item_name}</td>
+                         <td>${e.manufacturer}</td>
+                         <td>${e.category}</td>
+                         <td>${e.size}</td>
+                         <td>${e.unit_price}</td>
+                         <td>${e.in_store}</td>
+                        </tr>`
         table.innerHTML += elements
     })
 }
