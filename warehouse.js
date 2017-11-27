@@ -11,12 +11,15 @@ function ajax(method, url, callback) {
 
 let displayClothes = (items) => {
     console.log(items)
-    let columns = document.querySelector('.type')
+    let table = document.querySelector('.rows')
     items.data.forEach(function(e){
-        let rows = document.createElement('li')
-        columns.appendChild(rows)
-        rows.innerHTML = e.item_name
-        
+        let elements = `<td>${e.item_name}</td>
+                        <td>${e.manufacturer}</td>
+                        <td>${e.category}</td>
+                        <td>${e.size}</td>
+                        <td>${e.unit_price}</td>
+                        <td>${e.in_store}</td>`
+        table.innerHTML += elements
     })
 }
 
