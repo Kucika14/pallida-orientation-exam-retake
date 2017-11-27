@@ -1,6 +1,6 @@
 'use strict'
 
-let express = require('express')
+let express = require('express');
 const mysql = require('mysql');
 
 let app = express();
@@ -17,7 +17,7 @@ const connection = mysql.createConnection({
 connection.connect();
 
 app.get('/warehouse', function(req, res){
-    connection.query('SELECT * FROM warehouse', function(error, results){
+    connection.query('SELECT * FROM warehouse', function(err, results){
         res.send({
             "result": "ok",
             "data": results
@@ -26,4 +26,4 @@ app.get('/warehouse', function(req, res){
 })
 
 
-app.listen(8080, () => console.log('server running on "http://localhost:8080"'))
+app.listen(3000, () => console.log('server running on "http://localhost:3000"'))
