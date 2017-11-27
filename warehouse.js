@@ -10,8 +10,7 @@ function ajax(method, url, callback) {
 }
 
 let displayClothes = (items) => {
-    console.log(items)
-    let table = document.querySelector('table')
+    let table = document.querySelector('table');
     table.innerHTML = `<thead>
                         <th>ITEM NAME</th>
                         <th>manufacturer</th> 
@@ -19,7 +18,7 @@ let displayClothes = (items) => {
                         <th>size</th>
                         <th>unit price</th>
                         <th>in store</th>
-                       </thead>`
+                       </thead>`;
     items.data.forEach(function(e){
         let elements = `<tr>
                          <td>${e.item_name}</td>
@@ -28,23 +27,24 @@ let displayClothes = (items) => {
                          <td>${e.size}</td>
                          <td>${e.unit_price}</td>
                          <td>${e.in_store}</td>
-                        </tr>`
-        table.innerHTML += elements
+                        </tr>`;
+        table.innerHTML += elements;
     })
 }
 
-ajax('GET', 'http://localhost:3000/warehouse', displayClothes)
+ajax('GET', 'http://localhost:3000/warehouse', displayClothes);
 
 
-let button = document.querySelector('button')
+let button = document.querySelector('button');
 
 button.addEventListener('click', function(){
-    let item = document.querySelector('#item')
-    let size = document.querySelector('#size')
-    let quantity = document.querySelector('#quantity')
-    ajax('GET', `http://localhost:3000/price-check?item=${item.value}&size=${size.value}&quantity=${quantity.value}`, getOrder)
+    let item = document.querySelector('#item');
+    let size = document.querySelector('#size');
+    let quantity = document.querySelector('#quantity');
+    ajax('GET', `http://localhost:3000/price-check?item=${item.value}&size=${size.value}&quantity=${quantity.value}`, getOrder);
 })
 
 let getOrder = () => {
-}
+
+};
 

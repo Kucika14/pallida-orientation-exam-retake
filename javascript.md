@@ -96,4 +96,12 @@ Return the following JSON if the quantity is smaller than 3:
 ## 2) Quiz time
 
  - What is a middleware and why it's used? (2p)
+
+ - middlewares, for example "express" is computer software that connects software components or applications. The software consists of a set of services that allows multiple processes running on one or more machines to interact.
+
+
+
  - What's the main difference between the `onload` and the `readystatechange` provided by the `XMLHttpRequest` object? (1p)
+
+ - The `readystatechange` event occurs after the HTML document has been loaded, while the `onload`  event occurs later, when all content (e.g. images) also has been loaded.
+ - The `onload`  event is a standard event in the DOM, while the `readystatechange` event is specific to jQuery. The purpose of the `readystatechange` event is that it should occur as early as possible after the document has loaded, so that code that adds functionality to the elements in the page doesn't have to wait for all content to load.
