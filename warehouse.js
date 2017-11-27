@@ -34,3 +34,17 @@ let displayClothes = (items) => {
 }
 
 ajax('GET', 'http://localhost:3000/warehouse', displayClothes)
+
+
+let button = document.querySelector('button')
+
+button.addEventListener('click', function(){
+    let item = document.querySelector('#item')
+    let size = document.querySelector('#size')
+    let quantity = document.querySelector('#quantity')
+    ajax('GET', `http://localhost:3000/price-check?item=${item.value}&size=${size.value}&quantity=${quantity.value}`, getOrder)
+})
+
+let getOrder = () => {
+}
+

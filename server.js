@@ -25,5 +25,15 @@ app.get('/warehouse', function(req, res){
     })
 })
 
+// app.get('/price-check/?', function(req, res){
+//     let sql = 'SELECT * FROM warehouse WHERE item_name = ?';    
+
+//     connection.query(sql, req.query.item, function(err, results){
+//         res.send({
+//             "result": "ok",
+//             "data": results
+//         });
+//     });
+// });
 
 app.listen(3000, () => console.log('server running on "http://localhost:3000"'))
