@@ -1,0 +1,20 @@
+{
+  "name": "pallida-orientation-exam-retake",
+  "version": "1.0.0",
+  "description": "Build a webshop that people can use to order some merchandise from the Greenfox store.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kucika14/pallida-orientation-exam-retake.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kucika14/pallida-orientation-exam-retake/issues"
+  },
+  "homepage": "https://github.com/Kucika14/pallida-orientation-exam-retake#readme"
+}
