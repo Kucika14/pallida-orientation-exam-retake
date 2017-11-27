@@ -1,0 +1,26 @@
+body {
+    width: 950px;
+}
+
+table {
+    width: 900px;
+    height: 600px;
+    font-size: 18px;
+    text-align: left;
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+
+th {
+    position: relative;
+    left: 5px;
+}
+
+td {
+    position: relative;
+    left: 5px;
+}
+th {
+    height: 100px;
+    font-weight: normal;
+}
