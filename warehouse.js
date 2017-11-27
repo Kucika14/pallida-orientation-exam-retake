@@ -9,16 +9,15 @@ function ajax(method, url, callback) {
     xhr.send();
 }
 
-let displayClothes = (clothes) => {
-    console.log(clothes)
-    // let columns = document.querySelector('.pipe')
-    // animals.data.forEach(function(e){
-    //     let checkBox = `<>`
-    //     let rows = document.createElement('li')
-    //     columns.appendChild(rows)
-    //     rows.innerHTML = checkBox + e.pet_name
+let displayClothes = (items) => {
+    console.log(items)
+    let columns = document.querySelector('.type')
+    items.data.forEach(function(e){
+        let rows = document.createElement('li')
+        columns.appendChild(rows)
+        rows.innerHTML = e.item_name
         
-    // })
+    })
 }
 
 ajax('GET', 'http://localhost:3000/warehouse', displayClothes)
