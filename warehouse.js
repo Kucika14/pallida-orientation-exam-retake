@@ -45,6 +45,8 @@ button.addEventListener('click', function(){
 })
 
 let getOrder = () => {
-
+    if (quantity.value <= 3){
+        alert("I am an alert box!")
+    }
 };
 
